@@ -1,0 +1,73 @@
+Introduction
+==============
+Shoreline extraction is the process of identifying the position of the land-water interface in satellite images.
+It is an important task for various applications, such as coastline change detection and coastal zone management.
+The task of shoreline extraction is very difficult, time-consuming, and sometimes impossible for entire coastal systems 
+when using traditional ground survey techniques.
+
+ Advanced remote sensing (RS) and geographic information system (GIS) techniques are being used for detection of shoreline position and change analysis.
+ For accurate subpixel accuracy for characterising the shoreline changes, an automated way/tool for shoreline extraction in required.
+
+ In general, the shoreline extraction process involves obtaining satellite images, pre-processing the data, and applying machine learning algorithms to extract the shoreline.
+
+ How accurate are the machine learning algorithms in extracting shorelines?
+ ----------------------------------------------------------------------------
+ The accuracy of machine learning algorithms in shoreline extraction depends on various factors such as quality of the satellite images, the complexity of the shoreline, and the type 
+ of machine learning algorithm used.
+
+ For instance, a study by Celik and Gazioglou (2022) assessed the accuracy of three machine learning classifier groups (Support Vector Machines, Multilayer Perceptron (MLP), 
+ and Ensemble Learning classifiers) on different coastal types for coastline extraction. The authors tested four kernel functions and four activation functions and found that 
+ the Random Forest algorithm had better accuracy than the SVM algorithm. The overall accuracy values of all maps were 97.18%, and the kappa coefficient was 0.97 for RF algorithm, 
+ while for SVM algorithm, the mean overall accuracy and kappa coefficient of maps were 85.15% and 0.79, respectively 
+
+Another study by Zhang et al. (2019) proposed a deep learning-based method for shoreline extraction from Sentinel-2 images. The authors used a U-Net architecture with a ResNet-50 encoder to 
+extract shorelines from Sentinel-2 images. The proposed method achieved an overall accuracy of 96.7% on a test dataset.
+
+However, it is important to note that the accuracy of machine learning algorithms in shoreline extraction is not always perfect and can be affected by various factors such as weather conditions, 
+image quality, and other environmental factors. Therefore, it is important to validate the results of any machine learning algorithm with ground truth data or other reliable sources.
+
+Challenges in automated shoreline Extraction
+---------------------------------------------
+Automated shoreline extraction is a complex task that involves several challenges. Some of these challenges include: |br|
+| * **Image quality:** The quality of the satellite images can affect the accuracy of the shoreline extraction process. Poor image quality can lead to errors in the detection of the shoreline.
+| * **Shoreline complexity:** The complexities of the shoreline has been the major challenge in the automatic shoreline process especially the coastlines of Madagascar which has complex geometries coupled with many inlets and bays.
+* **Weather conditions:** Weather conditions such as cloud cover, fog and haze affects the quality of satellite images especially with optical satellite images which makes it difficult to extract shorelines accurately.
+* **Environmental factors:** Environmental factors such as such as tides, waves, and currents can also affect the accuracy of shoreline extraction.
+* **Machine learning algorithms:** The choice of machine learning algorithm used for shoreline extraction can also affect its accuracy. Different algorithms have different strengths and weaknesses,  and choosing the right one for a particular application is important.
+* **Ground truth data** Validating the results of machine learning algorithms with ground truth data/other reliable sources is important to ensure their accuracy.
+
+shoreline extraction applications
+----------------------------------
+Shoreline extraction has several applications in various fields. Some of the applications of shoreline extraction include:
+* **Coastal zone management:** Shoreline extraction can be used to monitor changes in the coastline and assess the impact of human activities on the coastal environment.
+* **Coastal erosion monitoring** It can be used to monitor the rate of coastal erosion and identify areas that are at risk of erosion.
+* **Marine ecology** Shoreline extraction can be used to study the distribution and abundance of marine organisms along the coast.
+* **Coastal engineering** Shoreline extraction can be used to design coastal structures such as breakwaters, jetties, and seawalls.
+* **Navigation** Shorelne extraction can be used to create nautical charts and maps for navigation purposes.
+
+Background
+===========
+
+
+Data Acquisition
+=================
+
+
+Pre-processing
+===============
+
+
+Shoreline Extraction
+=====================
+
+
+Results
+========
+
+
+Discussion
+===========
+
+
+Conclusion
+===========
