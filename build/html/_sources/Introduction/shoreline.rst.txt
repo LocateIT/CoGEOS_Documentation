@@ -1,5 +1,9 @@
+SHORELINE
+==========
+
 Introduction
 ==============
+
 Shoreline extraction is the process of identifying the position of the land-water interface in satellite images.
 It is an important task for various applications, such as coastline change detection and coastal zone management.
 The task of shoreline extraction is very difficult, time-consuming, and sometimes impossible for entire coastal systems 
@@ -44,9 +48,6 @@ Shoreline extraction has several applications in various fields. Some of the app
 * **Marine ecology** Shoreline extraction can be used to study the distribution and abundance of marine organisms along the coast.
 * **Coastal engineering** Shoreline extraction can be used to design coastal structures such as breakwaters, jetties, and seawalls.
 * **Navigation** Shorelne extraction can be used to create nautical charts and maps for navigation purposes.
-
-Background
-===========
 
 
 Data Acquisition

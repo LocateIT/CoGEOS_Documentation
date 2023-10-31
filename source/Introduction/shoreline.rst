@@ -1,5 +1,9 @@
+SHORELINE
+==========
+
 Introduction
 ==============
+
 Shoreline extraction is the process of identifying the position of the land-water interface in satellite images.
 It is an important task for various applications, such as coastline change detection and coastal zone management.
 The task of shoreline extraction is very difficult, time-consuming, and sometimes impossible for entire coastal systems 
