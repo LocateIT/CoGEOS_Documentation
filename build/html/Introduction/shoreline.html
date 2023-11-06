@@ -6,7 +6,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>SHORELINE &#8212; CoGEOS  documentation</title>
   
@@ -18,12 +18,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -31,17 +31,17 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
 
-    <script src="../_static/documentation_options.js?v=8a448e45"></script>
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Introduction/shoreline';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Introduction" href="geomorphology.html" />
+    <link rel="next" title="GEOMOPHOLOGY" href="geomorphology.html" />
     <link rel="prev" title="Welcome to CoGEOS’s documentation!" href="../index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -114,6 +114,7 @@
   
   
   
+  
     <p class="title logo__title">CoGEOS  documentation</p>
   
 </a></div>
@@ -142,7 +143,7 @@
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="geomorphology.html">
-                        Introduction
+                        GEOMOPHOLOGY
                       </a>
                     </li>
                 
@@ -236,7 +237,7 @@ document.write(`
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="geomorphology.html">
-                        Introduction
+                        GEOMOPHOLOGY
                       </a>
                     </li>
                 
@@ -339,7 +340,7 @@ extract shorelines from Sentinel-2 images. The proposed method achieved an overa
 image quality, and other environmental factors. Therefore, it is important to validate the results of any machine learning algorithm with ground truth data or other reliable sources.</p>
 <section id="challenges-in-automated-shoreline-extraction">
 <h2>Challenges in automated shoreline Extraction<a class="headerlink" href="#challenges-in-automated-shoreline-extraction" title="Link to this heading">#</a></h2>
-<p>Automated shoreline extraction is a complex task that involves several challenges. Some of these challenges include: <a href="#id1"><span class="problematic" id="id2">|br|</span></a>
+<p>Automated shoreline extraction is a complex task that involves several challenges. Some of these challenges include: <a href="#id8"><span class="problematic" id="id9">|br|</span></a>
 | * <strong>Image quality:</strong> The quality of the satellite images can affect the accuracy of the shoreline extraction process. Poor image quality can lead to errors in the detection of the shoreline.
 | * <strong>Shoreline complexity:</strong> The complexities of the shoreline has been the major challenge in the automatic shoreline process especially the coastlines of Madagascar which has complex geometries coupled with many inlets and bays.
 * <strong>Weather conditions:</strong> Weather conditions such as cloud cover, fog and haze affects the quality of satellite images especially with optical satellite images which makes it difficult to extract shorelines accurately.
@@ -359,18 +360,138 @@ image quality, and other environmental factors. Therefore, it is important to va
 </section>
 <section id="data-acquisition">
 <h1>Data Acquisition<a class="headerlink" href="#data-acquisition" title="Link to this heading">#</a></h1>
+<p>Recognizing the paramount role of data in any analysis, this procedure holds utmost significance in the project. Tailoring to the specific requirements reliant on earth observation data, the data for this project was sourced from Google Earth Engine. Given the workflow specifications and the need for optimal accuracy in the outputs, high-resolution imagery is the most practical choice. In this context, Sentinel-2 data is the preferred option due to its 10-meter resolution, as opposed to Landsat’s 30 meters. Considering the shoreline extraction requirements using both RADAR and Optical imagery, Sentinel-1 data was also obtained from Google Earth Engine.</p>
+<p>For region-specific data acquisition, a 500-meter buffer polygon is generated based on the existing administrative country boundary data, with a specific focus on the coastal shoreline. To reduce computation time, this buffered polygon is subdivided into equally sized grids. These gridded buffers are then uploaded to Google Earth Engine and employed as the region of interest polygons for satellite data retrieval. The satellite data is downloaded for each grid section, and a mosaic of these grids is created to obtain a single image covering the entire area of interest.</p>
 </section>
-<section id="pre-processing">
-<h1>Pre-processing<a class="headerlink" href="#pre-processing" title="Link to this heading">#</a></h1>
+<section id="data-pre-processing">
+<h1>Data Pre-processing<a class="headerlink" href="#data-pre-processing" title="Link to this heading">#</a></h1>
+<p>Data preprocessing is a fundamental step in a shoreline extraction project using Sentinel-2 satellite imagery data. This process involves several crucial procedures to ensure the data’s accuracy and usability for shoreline delineation.</p>
+<section id="sentinel-2">
+<h2>Sentinel-2<a class="headerlink" href="#sentinel-2" title="Link to this heading">#</a></h2>
+<p>For a systematic approach to data preprocessing in a shoreline extraction project using Sentinel-2 satellite imagery data, the following procedural steps are employed:</p>
+<ol class="arabic">
+<li><p>Radiometric Correction:</p>
+<p>Sentinel-2 imagery is often affected by atmospheric conditions and sensor artifacts, which can distort the true reflectance values. Radiometric correction, such as top-of-atmosphere (TOA) correction, helps in standardizing the data by removing these atmospheric effects, ensuring that the pixel values reflect the actual surface properties. This correction is essential for accurate shoreline extraction, as it provides a consistent radiometric foundation for analysis.</p>
+</li>
+<li><p>Geometric Correction:</p>
+<p>Geometric distortions can occur in satellite imagery due to factors like terrain relief and Earth’s curvature. To extract shorelines accurately, it’s vital to ensure that the imagery aligns with accurate geospatial coordinates. Geometric correction involves the removal of distortions and the transformation of the imagery to a common coordinate system, allowing for precise georeferencing.</p>
+</li>
+<li><p>Cloud and Shadow Masking:</p>
+<p>Cloud and shadow masking techniques are often applied to identify and remove unwanted data regions. A cloud masking function is applied on the imagery utilizing the cloud cover band for the removal process. Consequently, the S2-Cloudless imagery is of much relevance in conducting this cloud removal.</p>
+</li>
+</ol>
+<p>By systematically implementing radiometric and geometric correction, along with cloud and shadow masking, Sentinel-2 imagery is prepared for shoreline extraction. This process guarantees that the data is reliable and suitable for accurate coastline delineation in geospatial projects.</p>
+</section>
+<section id="sentinel-1">
+<h2>Sentinel-1<a class="headerlink" href="#sentinel-1" title="Link to this heading">#</a></h2>
+<p>To ensure the quality and suitability of Sentinel-1 satellite imagery data for shoreline extraction, the following procedural steps are undertaken in the data preprocessing phase:</p>
+<ol class="arabic">
+<li><p>Radiometric Calibration:</p>
+<p>Radiometric calibration, which aims to reduce the impact of radiometric distortions in the imagery. Sentinel-1 data can be influenced by various sources of noise, and radiometric calibration aims to standardize the backscatter values, making them more consistent and comparable. This is vital for accurate shoreline extraction, as it ensures that the pixel values represent the actual surface characteristics, allowing for more reliable analysis.</p>
+</li>
+<li><p>Geometric Correction:</p>
+<p>Sentinel-1 data may contain geometric distortions caused by the radar sensor’s viewing geometry and Earth’s topography. To extract shorelines with precision, it’s crucial to ensure that the imagery is accurately georeferenced. Geometric correction involves correcting these distortions and transforming the data into a common coordinate system, enhancing the accuracy of shoreline extraction.</p>
+</li>
+<li><p>Speckle Noise Reduction:</p>
+<p>Speckle noise reduction techniques are often applied to mitigate the impact of unwanted noise in the imagery, improving the overall data quality.</p>
+</li>
+</ol>
+<p>By conducting radiometric calibration, geometric correction, and speckle noise reduction, Sentinel-1 data is well-prepared for shoreline extraction, providing a solid foundation for precise coastline delineation in geospatial projects.</p>
+<p>The acquired satellite image is preprocessed with the above satellite image specific procedures to obtain a clean and corrected image for the extraction process.</p>
+</section>
 </section>
 <section id="shoreline-extraction">
 <h1>Shoreline Extraction<a class="headerlink" href="#shoreline-extraction" title="Link to this heading">#</a></h1>
+<section id="id1">
+<h2>Sentinel-2<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p>In a shoreline extraction project utilizing Sentinel-2 satellite imagery data, the procedure involves a series of steps to accurately delineate coastlines. The procedures outlined below are applied to the preprocessed composite image.</p>
+<ol class="arabic">
+<li><p>Water Indices Calculation</p>
+<p>To differentiate land from water, an Automated Water Extraction Index (AWEI) is computed. To overcome the shadow pixel effects on the final distinguishing output, the AWEInsh index is utilized since it tends to distinguish the water pixels from the shadow pixels. The index utilizes the BLUE, GREEN, NIR, SWIR1, and the SWIR2 bands. These indices highlight the accurate presence of water bodies, a crucial step for shoreline identification.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">AWEIsh</span> <span class="o">=</span> <span class="n">Blue</span> <span class="o">+</span> <span class="mf">2.5</span> <span class="err">×</span> <span class="n">Green</span> <span class="err">−</span> <span class="mf">1.5</span> <span class="err">×</span> <span class="p">(</span><span class="n">NIR</span> <span class="o">+</span> <span class="n">SWIR1</span><span class="p">)</span> <span class="err">−</span> <span class="mf">0.25</span> <span class="err">×</span> <span class="n">SWIR2</span>
+</pre></div>
+</div>
+</li>
+<li><p>Thresholding and Classification</p>
+<p>Using the water indices, a thresholding process distinguishes between land and water pixels. The thresholding technique utilized is the Otsu thresholding technique. This technique creates histogram values from the AWEInsh generated image, which are then passed onto the Otsu thresholding function to create a dynamic threshold that sets threshold values for distinguishing land and water. Afterward, the image is classified into two pixel values, with 0 representing water and 1 representing land.</p>
+</li>
+</ol>
+<ol class="arabic" start="4">
+<li><p>Shoreline Extraction</p>
+<p>With the primary focus being on coastal waters, inland waters are removed using an island removal function that utilizes area thresholds to filter out small water bodies from the land. An output of the land-water boundary, showcasing both land and water, is produced. The land-water boundary polygon is converted into a vector layer, resulting in two polygons: one representing the land and the other representing water. The water polygon is removed, leaving only the land boundary from which the boundary extent is extracted. The extracted shoreline is then simplified to obtain a smoother shoreline with simplified edges.</p>
+</li>
+<li><p>Validation and Accuracy Assessment:</p>
+<p>The extracted shoreline is validated against ground truth data to assess its accuracy. Adjustments are made as necessary to improve the results.</p>
+</li>
+<li><p>Temporal Analysis</p>
+<p>For monitoring changes over time, multiple satellite images captured at different dates are analyzed for each island to identify trends and alterations in the shoreline.</p>
+</li>
+</ol>
 </section>
+<section id="id2">
+<h2>Sentinel-1<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<hr class="docutils" />
+<blockquote>
+<div><p>Section to fill</p>
+</div></blockquote>
+</section>
+</section>
+<hr class="docutils" />
 <section id="results">
 <h1>Results<a class="headerlink" href="#results" title="Link to this heading">#</a></h1>
+<section id="mauritius">
+<h2>Mauritius<a class="headerlink" href="#mauritius" title="Link to this heading">#</a></h2>
+<p>Shoreline data derived from sentinel-2 imagery in this region reveals a spatial shift in the coastline over the course of two consecutive years. The predominant alteration in the shoreline is characterized by minimal changes, encompassing a substantial 57% of the total variation. Conversely, a significant 24.5% of the shoreline transformation is attributed to a pronounced retreat, with an additional 15.4%, 1.8%, and 1.4% associated with moderate retreat, moderate erosion, and high erosion, respectively. It is worth noting that the Mauritius shoreline exhibits relatively low levels of erosion, which have effectively deterred retreat dynamics, accounting for only 6.6% of the overall transformation. This outcome accentuates the prominence of shoreline expansion, representing a dominant 93.4% of the total change.</p>
+<a class="reference internal image-reference" href="../_images/shorelinechangerate.png"><img alt="../_images/shorelinechangerate.png" class="align-left" src="../_images/shorelinechangerate.png" style="width: 45%;" /></a>
+<a class="reference internal image-reference" href="../_images/Growthandretreat.png"><img alt="../_images/Growthandretreat.png" class="align-right" src="../_images/Growthandretreat.png" style="width: 45%;" /></a>
+</section>
+<section id="seychelles">
+<h2>Seychelles<a class="headerlink" href="#seychelles" title="Link to this heading">#</a></h2>
+<p>Seychelles exhibits remarkably consistent shoreline transformation rates, showcasing similarities in high erosion, minimal change, and substantial retreat, constituting 25.3%, 26.1%, and 23.2% of the total alterations, respectively. During this six-year span, moderate erosion and moderate retreat gained prominence, contributing 14.4% and 11.0%, respectively, to the shoreline’s evolution. Seychelles unravels the enigmatic dance between coastal expansion and withdrawal, with growing areas taking up 46.4% of the narrative, albeit overshadowed by the dominance of retreating regions, accounting for 53.6% of the dynamic alterations.</p>
+<a class="reference internal image-reference" href="../_images/shorelinechangerate1.png"><img alt="../_images/shorelinechangerate1.png" class="align-left" src="../_images/shorelinechangerate1.png" style="width: 45%;" /></a>
+<a class="reference internal image-reference" href="../_images/Growthandretreat1.png"><img alt="../_images/Growthandretreat1.png" class="align-right" src="../_images/Growthandretreat1.png" style="width: 45%;" /></a>
+</section>
+<section id="mayotte-island-comoros">
+<h2>Mayotte Island-Comoros<a class="headerlink" href="#mayotte-island-comoros" title="Link to this heading">#</a></h2>
+<p>The results delineate the shoreline’s transformation rates, where high erosion predominantly covers 64.8% of the shoreline changes. Following high erosion, the second most significant change rate is found to be low change, accounting for 12.0% of the alterations. High retreat, moderate erosion, and moderate retreat come next in line, contributing 10%, 9.4%, and 3.9%, respectively, to the total observed changes. This study further highlights a concerning situation, with a substantial portion of the overall shoreline change area undergoing retreat (86.4%), while a small segment represents growth areas, constituting only 13.6% of the observed alterations.</p>
+<a class="reference internal image-reference" href="../_images/shorelinechangerate2.png"><img alt="../_images/shorelinechangerate2.png" class="align-left" src="../_images/shorelinechangerate2.png" style="width: 45%;" /></a>
+<a class="reference internal image-reference" href="../_images/Growthandretreat2.png"><img alt="../_images/Growthandretreat2.png" class="align-right" src="../_images/Growthandretreat2.png" style="width: 45%;" /></a>
+</section>
+<section id="ngazidja-island-comoros">
+<h2>Ngazidja Island-Comoros<a class="headerlink" href="#ngazidja-island-comoros" title="Link to this heading">#</a></h2>
+<p>The results obtained from the shoreline analysis unveil a substantial portion of the shoreline, approximately 46.0%, characterized by low change dynamics, while high erosion influences around 30% of the shoreline. These two predominant rates serve as valuable indicators when anticipating the state of Grande Comore Island’s shoreline. Additionally, we observed occurrences of high retreat, moderate erosion, and moderate retreat, each contributing 14.3%, 6%, and 3.8% to the overall shoreline change rate. Significantly, the findings emphasize the prevalence of retreat in the coastal shoreline, primarily due to the substantial impact of erosion on specific shore sections, accounting for 61.5% of the total changes. In contrast, growth dynamics along the coastal shoreline remain limited, representing only 38.5% of the overall change dynamics.</p>
+<a class="reference internal image-reference" href="../_images/shorelinechangerate3.png"><img alt="../_images/shorelinechangerate3.png" class="align-left" src="../_images/shorelinechangerate3.png" style="width: 45%;" /></a>
+<a class="reference internal image-reference" href="../_images/Growthandretreat3.png"><img alt="../_images/Growthandretreat3.png" class="align-right" src="../_images/Growthandretreat3.png" style="width: 45%;" /></a>
+</section>
+<section id="nzwani-and-mwali-island-comoros">
+<h2>Nzwani and Mwali Island-Comoros<a class="headerlink" href="#nzwani-and-mwali-island-comoros" title="Link to this heading">#</a></h2>
+<p>An analysis of shoreline changes over six years reveals key patterns. The majority (56.7%) of the shoreline remained stable, while 19.5% experienced high erosion levels, indicating vulnerability. Additionally, around 14.1% displayed moderate erosion, and 7.0% witnessed moderate retreat. Although high retreat levels were less prevalent, the 2.9% with the highest retreat rates highlight significant retreat in specific areas. Retreat processes dominated at 85.1% of the total shoreline changes, supported by high erosion rates exceeding retreat levels. In contrast, 14.9% of changes represented growth dynamics, marking a distinct contrast.</p>
+<a class="reference internal image-reference" href="../_images/shorelinechangerate4.png"><img alt="../_images/shorelinechangerate4.png" class="align-left" src="../_images/shorelinechangerate4.png" style="width: 45%;" /></a>
+<a class="reference internal image-reference" href="../_images/Growthandretreat4.png"><img alt="../_images/Growthandretreat4.png" class="align-right" src="../_images/Growthandretreat4.png" style="width: 45%;" /></a>
+</section>
 </section>
 <section id="discussion">
-<h1>Discussion<a class="headerlink" href="#discussion" title="Link to this heading">#</a></h1>
+<h1>DISCUSSION<a class="headerlink" href="#discussion" title="Link to this heading">#</a></h1>
+<section id="id3">
+<h2>Mauritius<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>Mauritius’ coastal shoreline has demonstrated remarkable stability during the observed two-year period. This stability can be primarily attributed to effective measures taken to mitigate the influences of erosion and accretion. Specifically, the establishment of breakwaters along certain sections of the island’s shoreline has proven instrumental in shielding it from the potentially adverse effects of wind and waves. Moreover, the implementation of seawalls in the urbanized coastal areas has further bolstered shoreline protection against erosion and accretion, which can result from sediment movements along the coast or tidal waves. These initiatives underscore the government’s longstanding commitment to formulating and implementing policies aimed at safeguarding the coastal regions and their surrounding environments.</p>
+</section>
+<section id="id4">
+<h2>Seychelles<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>Predominantly, minimal changes characterize the shoreline, with a harmonious equilibrium maintained between heightened erosion and increased retreat levels. These shoreline dynamics are significantly influenced by the island’s diverse coastal ecosystem, playing a synergistic role in these alterations. The presence of human settlements along the shoreline presents a dual-edged impact, notably contributing to coastal erosion along the western segment of the island. This can be attributed, in part, to the extraction of sediments for construction purposes, rendering the shoreline susceptible to erosion. Conversely, the human settlement factor contributes to shoreline accretion levels, given that construction activities introduce artificial elements that exert influence on sediment transport and sediment entrapment. These artificial features can foster accretion zones while concurrently safeguarding neighboring areas from erosion processes.</p>
+</section>
+<section id="id5">
+<h2>Mayotte Island-Comoros<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<p>The island of Mayotte grapples with the significant challenge of high erosion levels, stemming from a multifaceted set of factors, prominently including human settlements along its coastal areas. This assertion gains substantial support from research findings, which prominently reveal heightened erosion trends across a substantial portion of the island’s coastal settlements. Furthermore, the erosive impacts of tidal wave actions upon the shoreline play a pivotal role in exacerbating this situation. The absence of a biologically diverse shoreline landscape further compounds the predicament by rendering the coastline devoid of natural protective buffers, thus leaving it exposed and susceptible to erosion. This discerning analysis of the results accentuates the pressing need for proactive management strategies to harmonize coastal development endeavors with the imperatives of environmental preservation.</p>
+</section>
+<section id="id6">
+<h2>Ngazidja Island-Comoros<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<p>A substantial portion of Ngazidja’s coastal shoreline remained remarkably stable over the observed years, with minimal changes or, in some cases, virtually no alterations. This observation can be attributed to the distinctive composition of Ngazidja’s coastline, characterized predominantly by sandy beaches and ancient volcanic lava flows along the northern, northeastern, and southeastern sectors. These geological features render these shoreline sections more susceptible to erosion and wave-induced actions. Furthermore, the presence of rocky cliffs and shallow reefs, primarily located along the western and southwestern segments, enhances the shoreline’s resilience to the potential effects of rising sea levels. The juxtaposition of these two distinctive geological elements contributes to a state of equilibrium in the dynamics of change, counterbalancing the forces of erosion and accretion. Nonetheless, it is worth noting that while a significant portion of the shoreline maintains a state of low change, certain sections exhibit a predisposition to high erosion and limited accretion.</p>
+</section>
+<section id="id7">
+<h2>Nzwani and Mwali Island-Comoros<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<p>Similarly, to Ngazidja, the shoreline dynamics of Nzwani and Mwali primarily exhibited a state of low change as the dominant pattern. This pattern is underpinned by several factors that influence these coastal areas. Notably, both Nzwani and Mwali feature extensive mangrove vegetation along their shorelines, which serves as a natural defense against the impacts of waves and storm surges, effectively mitigating their effect on the coast. Furthermore, these mangroves play a vital role in sediment capture, reducing the erosive potential caused by sediment movement. The application of rigorous coastal management strategies also contributes to this pattern, encompassing initiatives such as the construction of seawalls and breakwaters in various shoreline sections. A compelling example of these measures can be observed in Mutsamudu, the capital city of Nzwani.</p>
+</section>
 </section>
 <section id="conclusion">
 <h1>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h1>
@@ -400,7 +521,7 @@ image quality, and other environmental factors. Therefore, it is important to va
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Introduction</p>
+        <p class="prev-next-title">GEOMOPHOLOGY</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -426,10 +547,32 @@ image quality, and other environmental factors. Therefore, it is important to va
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-acquisition">Data Acquisition</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-processing">Pre-processing</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#shoreline-extraction">Shoreline Extraction</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#results">Results</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#discussion">Discussion</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-pre-processing">Data Pre-processing</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sentinel-2">Sentinel-2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sentinel-1">Sentinel-1</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#shoreline-extraction">Shoreline Extraction</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Sentinel-2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Sentinel-1</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#results">Results</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mauritius">Mauritius</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#seychelles">Seychelles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mayotte-island-comoros">Mayotte Island-Comoros</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ngazidja-island-comoros">Ngazidja Island-Comoros</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nzwani-and-mwali-island-comoros">Nzwani and Mwali Island-Comoros</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#discussion">DISCUSSION</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Mauritius</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Seychelles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Mayotte Island-Comoros</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Ngazidja Island-Comoros</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Nzwani and Mwali Island-Comoros</a></li>
+</ul>
+</li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
 </ul>
 
@@ -456,8 +599,8 @@ image quality, and other environmental factors. Therefore, it is important to va
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -487,7 +630,7 @@ image quality, and other environmental factors. Therefore, it is important to va
     <div class="footer-items__end">
       
         <div class="footer-item"><p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.1.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.3.
 </p></div>
       
     </div>
