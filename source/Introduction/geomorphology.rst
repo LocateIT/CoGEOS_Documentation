@@ -159,4 +159,79 @@ Seagrass are flowering plants that are found in shallow coastal seawater and can
 Geomorphological Classification Scales
 --------------------------------------
 
-Based on the review of existing coastal features in the Indian Ocean Island Countries, the following
+Based on the review of existing coastal features in the Indian Ocean Island Countries, the following Classification Scales are employed for terrestrial and benthic features of the coast.
+
+.. figure:: fig7.png
+   :alt: The coastal feature classes
+
+Methodology
+------------
+
+The framework for the classification of coastal features is presented in Fig. 8. Sentinel 2 data is sourced and employed in the creation of a land and an ocean mask (about 5km from the shoreline). Terrestrial features are thereafter classified using a supervised classification technique (Maximum Likelihood or Support Vector Machine). Signature files are created using a sample set of control points for each feature. The result of the supervised classification is then validated against surveyed and literature sources. A manual correction is then undertaken to refine the classification of the classified features.
+
+Benthic features are classified from the extracted Sentinel 2 image using the ocean mask. A depth invariant index algorithm is applied to correct for the water column and enhance the accuracy of classification. A supervised classification technique is employed to delineate known features, including seagrass, underwater sediments, amongst others. An unsupervised k-means classification is used to detect unidentified classes. Validation and manual correction follow to ensure the correctness of the benthic classifications.
+
+.. figure:: fig8.png
+   :alt: Methodological framework for geomorphological feature identification
+
+Supervised Classification
+--------------------------
+
+Satellite sensors use the unique reflectance properties of distinct terrestrial features that permit delineation and characterization of their extents. Sentinel 2 high-resolution, multi-spectral images are used and consist of 13 spectral bands that range from the visible range to the shortwave infrared (SWIR). Supervised Classification: This process necessitates the user to manually interpret an image through grouping of grid cells that share common spectral reflectance. The classification procedures are summarized essentially in 3 main stages:
+
+1. Using visual interpretation, the spectral signature for a geomorphological class is defined → Training set for a class
+2. A classification algorithm is thereafter utilized and employs the training class to identify grid cells belonging to that spectral class
+3. The range of numerical spectral signature values (R,G,B,NIR,…) belonging to distinct feature classes are used to categorize and group cells sharing common spectral properties
+
+.. figure:: fig9.png
+   :alt: Sentinel 2 high-resolution, multi-spectral images
+
+Classification Algorithms
+-------------------------
+
+Maximum Likelihood Classification (MLC)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The algorithm assumes that the distribution for respective feature classes in each band follows a normal curve and determines the probability that a random pixel belongs to a certain class.
+
+.. figure:: fig10.png
+   :alt: Illustration of the underlying principle of MLC
+
+Support Vector Machine (SVM)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+SVM performs the classification by drawing a hyperplane. The hyperplane is drawn in such a way as to maximize the distance to points in either class (referred to as the margin).
+
+.. figure:: fig11.png
+   :alt: Illustration of the underlying principle of SVM
+
+Random Forest
+^^^^^^^^^^^^^
+
+This algorithm works by building multiple decision trees and then merging them together to get more stable and accurate predictions. A training dataset is used and labelled into a decision tree, with an underlying set of rules that will aid in the classification process.
+
+Unsupervised Classification
+---------------------------
+
+In unsupervised classification, no training dataset is required. Instead, the user specifies the number of classes and an algorithm automatically groups the classes that share similar statistical behavior. The most used clustering technique is the k-means method.
+
+Reflectance and Spectral Signature
+-----------------------------------
+
+The spectral information of features is used to distinguish between them. Energy from the sun is absorbed and reflected by features on earth, which are thereafter detected and measured. Each feature reflects energy to different extents owing to their chemical and structural compositions (Spectral Reflectance). These are interpreted and used to classify coastal terrestrial features.
+
+.. figure:: fig12.png
+   :alt: Reflectance spectra of terrestrial features
+
+Capturing the individual feature spectrum is relatively more complex than the terrestrial components. The outgoing radiation from the shallow water has the contribution of both the water column and bottom substrate. Water column correction is therefore applied in case the shallow lagoon section is murky. A Depth Invariant Index algorithm is employed in that regard. The distinction in spectral reflectance of different features helps identify benthic components.
+
+.. figure:: fig13.png
+   :alt: Reflectance spectra of benthic features
+
+References
+-------------
+
+Coastal zone. Available on: https://commons.wikimedia.org/wiki/File:Littoral_Zones.jpg 
+Coral polyp. Available on: https://commons.wikimedia.org/wiki/File:Coral_polyp_it.svg 
+Hedley, J.D., et al., Spectral unmixing of coral reef benthos under ideal conditions. Coral Reefs, 2004. 23(1): p. 60-73
+
