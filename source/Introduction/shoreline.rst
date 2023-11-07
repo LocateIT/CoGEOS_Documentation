@@ -112,7 +112,7 @@ In a shoreline extraction project utilizing Sentinel-2 satellite imagery data, t
 
 1. Water Indices Calculation
 
-   To differentiate land from water, an Automated Water Extraction Index (AWEI) is computed. To overcome the shadow pixel effects on the final distinguishing output, the AWEInsh index is utilized since it tends to distinguish the water pixels from the shadow pixels. The index utilizes the BLUE, GREEN, NIR, SWIR1, and the SWIR2 bands. These indices highlight the accurate presence of water bodies, a crucial step for shoreline identification.
+   To differentiate land from water, an Automated Water Extraction Index (AWEI) is computed. To overcome the shadow pixel effects on the final distinguishing output, the **AWEInsh** index is utilized since it tends to distinguish the water pixels from the shadow pixels. The index utilizes the BLUE, GREEN, NIR, SWIR1, and the SWIR2 bands. These indices highlight the accurate presence of water bodies, a crucial step for shoreline identification.
 
    .. code-block:: python
 
@@ -211,7 +211,7 @@ DISCUSSION
 ===========
 
 Mauritius
-------------
+----------
 
 Mauritius' coastal shoreline has demonstrated remarkable stability during the observed two-year period. This stability can be primarily attributed to effective measures taken to mitigate the influences of erosion and accretion. Specifically, the establishment of breakwaters along certain sections of the island's shoreline has proven instrumental in shielding it from the potentially adverse effects of wind and waves. Moreover, the implementation of seawalls in the urbanized coastal areas has further bolstered shoreline protection against erosion and accretion, which can result from sediment movements along the coast or tidal waves. These initiatives underscore the government's longstanding commitment to formulating and implementing policies aimed at safeguarding the coastal regions and their surrounding environments.
 
@@ -237,3 +237,16 @@ Similarly, to Ngazidja, the shoreline dynamics of Nzwani and Mwali primarily exh
 
 Conclusion
 ===========
+
+The shoreline change analysis focuses on automated shoreline extraction using high-resolution satellite imagery. Utilizing Sentinel-2 and Sentinel-1 data from Google Earth Engine, the project ensures accurate coastline delineation through data acquisition, preprocessing, and extraction steps. The benefits of the project include:
+
+* **Accurate Analysis**
+By employing radiometric and geometric correction techniques, along with cloud and shadow masking, the satellite imagery is prepared for shoreline extraction, ensuring reliable and precise analysis.
+
+* **Environmental Protection**
+The analysis highlights the importance of proactive measures, such as breakwaters, seawalls, and mangrove preservation, to safeguard coastal regions against erosion and accretion. This demonstrates a commitment to balancing coastal development with environmental preservation.
+
+* **Insights into Shoreline Dynamics**
+Results from different regions, such as Mauritius, Seychelles, Mayotte Island-Comoros, Ngazidja Island-Comoros, and Nzwani and Mwali Islands-Comoros, reveal patterns of shoreline transformation rates, facilitating a better understanding of dynamics like erosion, retreat, and growth. These insights can inform strategies for coastal management and adaptation to changing conditions.
+
+The project utilizes advanced remote sensing techniques to provide accurate shoreline extraction, while emphasizing the importance of environmental preservation and sustainable coastal management.
