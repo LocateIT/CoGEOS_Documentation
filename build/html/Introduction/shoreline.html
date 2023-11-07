@@ -407,7 +407,7 @@ image quality, and other environmental factors. Therefore, it is important to va
 <p>In a shoreline extraction project utilizing Sentinel-2 satellite imagery data, the procedure involves a series of steps to accurately delineate coastlines. The procedures outlined below are applied to the preprocessed composite image.</p>
 <ol class="arabic">
 <li><p>Water Indices Calculation</p>
-<p>To differentiate land from water, an Automated Water Extraction Index (AWEI) is computed. To overcome the shadow pixel effects on the final distinguishing output, the AWEInsh index is utilized since it tends to distinguish the water pixels from the shadow pixels. The index utilizes the BLUE, GREEN, NIR, SWIR1, and the SWIR2 bands. These indices highlight the accurate presence of water bodies, a crucial step for shoreline identification.</p>
+<p>To differentiate land from water, an Automated Water Extraction Index (AWEI) is computed. To overcome the shadow pixel effects on the final distinguishing output, the <strong>AWEInsh</strong> index is utilized since it tends to distinguish the water pixels from the shadow pixels. The index utilizes the BLUE, GREEN, NIR, SWIR1, and the SWIR2 bands. These indices highlight the accurate presence of water bodies, a crucial step for shoreline identification.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">AWEIsh</span> <span class="o">=</span> <span class="n">Blue</span> <span class="o">+</span> <span class="mf">2.5</span> <span class="err">×</span> <span class="n">Green</span> <span class="err">−</span> <span class="mf">1.5</span> <span class="err">×</span> <span class="p">(</span><span class="n">NIR</span> <span class="o">+</span> <span class="n">SWIR1</span><span class="p">)</span> <span class="err">−</span> <span class="mf">0.25</span> <span class="err">×</span> <span class="n">SWIR2</span>
 </pre></div>
 </div>
@@ -495,6 +495,20 @@ image quality, and other environmental factors. Therefore, it is important to va
 </section>
 <section id="conclusion">
 <h1>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h1>
+<p>The shoreline change analysis focuses on automated shoreline extraction using high-resolution satellite imagery. Utilizing Sentinel-2 and Sentinel-1 data from Google Earth Engine, the project ensures accurate coastline delineation through data acquisition, preprocessing, and extraction steps. The benefits of the project include:</p>
+<ul class="simple">
+<li><p><strong>Accurate Analysis</strong></p></li>
+</ul>
+<p>By employing radiometric and geometric correction techniques, along with cloud and shadow masking, the satellite imagery is prepared for shoreline extraction, ensuring reliable and precise analysis.</p>
+<ul class="simple">
+<li><p><strong>Environmental Protection</strong></p></li>
+</ul>
+<p>The analysis highlights the importance of proactive measures, such as breakwaters, seawalls, and mangrove preservation, to safeguard coastal regions against erosion and accretion. This demonstrates a commitment to balancing coastal development with environmental preservation.</p>
+<ul class="simple">
+<li><p><strong>Insights into Shoreline Dynamics</strong></p></li>
+</ul>
+<p>Results from different regions, such as Mauritius, Seychelles, Mayotte Island-Comoros, Ngazidja Island-Comoros, and Nzwani and Mwali Islands-Comoros, reveal patterns of shoreline transformation rates, facilitating a better understanding of dynamics like erosion, retreat, and growth. These insights can inform strategies for coastal management and adaptation to changing conditions.</p>
+<p>The project utilizes advanced remote sensing techniques to provide accurate shoreline extraction, while emphasizing the importance of environmental preservation and sustainable coastal management.</p>
 </section>
 
 
