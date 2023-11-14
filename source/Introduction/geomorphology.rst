@@ -11,7 +11,9 @@ According to the ICZM Protocol, the coastal zone is defined as 'a geomorphologic
 
 Tidal fluctuation causes the shoreline to migrate back and forth within the shore range, forming longshore bars near the low tide breaker line. The longshore bar demarcates the region between the nearshore zone and offshore region.
 
-.. figure:: fig1.png
+.. image:: images/geomorphology/Images/fig1.png
+   :align: center
+   :width: 70%
    :alt: Classification of the coastal region
 
 Types of Reefs
@@ -34,7 +36,9 @@ Atoll Reef
 
 An atoll is a roughly circular (annular) oceanic reef system surrounding a large (and often deep) central lagoon.
 
-.. figure:: fig2.png
+.. image:: images/geomorphology/Images/fig2.png
+   :align: center
+   :width: 70%   
    :alt: Structure of a fringing reef system
 
 Reef Zonation and Geomorphic Classes
@@ -80,6 +84,9 @@ Deeper submerged (> 5 m), hard-bottomed, horizontal to gently sloping (<10°), s
 In contrast to the fringing reef in figure 2 above, the barrier reef has a deeper lagoon section and an extended reef structure. This is depicted in figure 3 below.
 
 .. figure:: fig3.png
+.. image:: images/geomorphology/Images/fig3.png
+   :align: center
+   :width: 70%  
    :alt: Structure of a barrier reef system
 
 Coastal Landform
@@ -137,7 +144,10 @@ Corals
 
 Having survived several mass extinctions, corals are animals (marine invertebrates) despite having a plant-appearance. The coral animals are referred to as polyps and are colonial in nature, being hosted on calcium carbonate skeletons. All polyps exist in harmony on the same calcium carbonate skeleton. Coral polyps have tentacles with nematocyst – stinging cells to catch preys, even small fish (~10% of food source). Symbiotic algae living inside the coral polyp tissue (zooxanthellae) provide ~90% of food source through photosynthesis. The zooxanthellae is also responsible for giving the corals their pigmentation.
 
-.. figure:: fig4.png
+
+.. image:: images/geomorphology/Images/fig4.png
+   :align: center
+   :width: 70%
    :alt: The coral polyp
 
 Algae/Seaweed
@@ -145,7 +155,9 @@ Algae/Seaweed
 
 Algae are photosynthetic organisms that contain chlorophyll pigments. They lack the typical roots, stems, and leaves of vascular plants. They are not classified as plants. Instead, they fall into the group of protists and can be unicellular (Phytoplankton) or multicellular (macroalga seaweed). The most common types of algae include: (1) Brown algae/kelp (Shallow-Intermediate seawater); (2) Green algae (mostly in freshwater); Red algae (Deep seawater).
 
-.. figure:: fig5.png
+.. image:: images/geomorphology/Images/fig5.png
+   :align: center
+   :width: 70%
    :alt: The algal specie
 
 Seagrass
@@ -153,7 +165,10 @@ Seagrass
 
 Seagrass are flowering plants that are found in shallow coastal seawater and can develop into dense meadows. They play a vital role in stabilizing the coastline and minimizing sediment movement that may lead to erosion areas. They have important carbon sequestration properties – 4000 m² sequesters 550 kg equivalent carbon annually (Equivalent to a car traveling twice the distance from Madagascar, Comoros, Seychelles, and Mauritius).
 
-.. figure:: fig6.png
+
+.. image:: images/geomorphology/Images/fig6.png
+   :align: center
+   :width: 70%
    :alt: The seagrass specie
 
 Geomorphological Classification Scales
@@ -161,7 +176,9 @@ Geomorphological Classification Scales
 
 Based on the review of existing coastal features in the Indian Ocean Island Countries, the following Classification Scales are employed for terrestrial and benthic features of the coast.
 
-.. figure:: fig7.png
+.. image:: images/geomorphology/Images/fig7.png
+   :align: center
+   :width: 70%
    :alt: The coastal feature classes
 
 Methodology
@@ -171,7 +188,11 @@ The framework for the classification of coastal features is presented in Fig. 8.
 
 Benthic features are classified from the extracted Sentinel 2 image using the ocean mask. A depth invariant index algorithm is applied to correct for the water column and enhance the accuracy of classification. A supervised classification technique is employed to delineate known features, including seagrass, underwater sediments, amongst others. An unsupervised k-means classification is used to detect unidentified classes. Validation and manual correction follow to ensure the correctness of the benthic classifications.
 
-.. figure:: fig8.png
+
+.. image:: images/geomorphology/Images/fig8.png
+   :align: center
+   :width: 70%
+
    :alt: Methodological framework for geomorphological feature identification
 
 Supervised Classification
@@ -183,7 +204,10 @@ Satellite sensors use the unique reflectance properties of distinct terrestrial 
 2. A classification algorithm is thereafter utilized and employs the training class to identify grid cells belonging to that spectral class
 3. The range of numerical spectral signature values (R,G,B,NIR,…) belonging to distinct feature classes are used to categorize and group cells sharing common spectral properties
 
-.. figure:: fig9.png
+
+.. image:: images/geomorphology/Images/fig9.png
+   :align: center
+   :width: 70%
    :alt: Sentinel 2 high-resolution, multi-spectral images
 
 Classification Algorithms
@@ -194,7 +218,9 @@ Maximum Likelihood Classification (MLC)
 
 The algorithm assumes that the distribution for respective feature classes in each band follows a normal curve and determines the probability that a random pixel belongs to a certain class.
 
-.. figure:: fig10.png
+.. image:: images/geomorphology/Images/fig10.png
+   :align: center
+   :width: 70%
    :alt: Illustration of the underlying principle of MLC
 
 Support Vector Machine (SVM)
@@ -202,7 +228,10 @@ Support Vector Machine (SVM)
 
 SVM performs the classification by drawing a hyperplane. The hyperplane is drawn in such a way as to maximize the distance to points in either class (referred to as the margin).
 
-.. figure:: fig11.png
+
+.. image:: images/geomorphology/Images/fig11.png
+   :align: center
+   :width: 70%
    :alt: Illustration of the underlying principle of SVM
 
 Random Forest
@@ -220,12 +249,16 @@ Reflectance and Spectral Signature
 
 The spectral information of features is used to distinguish between them. Energy from the sun is absorbed and reflected by features on earth, which are thereafter detected and measured. Each feature reflects energy to different extents owing to their chemical and structural compositions (Spectral Reflectance). These are interpreted and used to classify coastal terrestrial features.
 
-.. figure:: fig12.png
+.. image:: images/geomorphology/Images/fig12.png
+   :align: center
+   :width: 70%
    :alt: Reflectance spectra of terrestrial features
 
 Capturing the individual feature spectrum is relatively more complex than the terrestrial components. The outgoing radiation from the shallow water has the contribution of both the water column and bottom substrate. Water column correction is therefore applied in case the shallow lagoon section is murky. A Depth Invariant Index algorithm is employed in that regard. The distinction in spectral reflectance of different features helps identify benthic components.
 
-.. figure:: fig13.png
+.. image:: images/geomorphology/Images/fig13.png
+   :align: center
+   :width: 70%
    :alt: Reflectance spectra of benthic features
 
 References
