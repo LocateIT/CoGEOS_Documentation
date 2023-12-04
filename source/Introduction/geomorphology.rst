@@ -2,130 +2,9 @@ GEOMOPHOLOGY
 =============
 
 Introduction
-------------
+============
 
-Coastal geomorphology monitoring is essential for understanding the dynamic changes in coastal landscapes. This documentation focuses on the classification of terrestrial classes in the Indian Ocean Island countries, namely Madagascar, Comoros, Seychelles, and Mauritius, utilizing Sentinel-2 satellite imagery. The identified classes include Barren, Beach, Cropland, Forest, Grassland, Mangroves, River/Creek, Road, Settlement, Stony, Water, and Wetland, contributing to comprehensive coastal monitoring efforts.
-
-Study Area and Importance
---------------------------
-
-The Indian Ocean islands exhibit diverse coastal features, making them vulnerable to natural and anthropogenic influences. Monitoring these areas is crucial for sustainable development, environmental conservation, and disaster risk reduction.
-
-.. figure:: path/to/indian_ocean_countries.png
-   :width: 400px
-   :alt: Indian Ocean Countries
-   :align: center
-
-The study focuses on the coastal regions of Madagascar, Comoros, Seychelles, and Mauritius. These islands exhibit diverse coastal landscapes, including beaches, mangroves, and wetlands, making them ideal for comprehensive geomorphological analysis.
-
-Data Source and Methodology
----------------------------
-
-The study relies on Sentinel-2 satellite data, known for its high-resolution and multispectral capabilities.
-
-**Data Acquisition**
-~~~~~~~~~~~~~~~~~~~~
-
-Sentinel-2 is a series of Earth observation satellites developed by the European Space Agency (ESA) as part of the Copernicus program. These satellites are equipped with a high-resolution multispectral imaging system, capturing data in various spectral bands. The key aspects that make Sentinel-2 imagery invaluable for land cover classification include:
-
-- **Spatial Resolution:** Sentinel-2 provides high spatial resolution, allowing for detailed and precise observations of the Earth's surface. This is crucial for distinguishing fine-scale features in coastal areas, such as beaches, mangroves, and wetlands.
-
-- **Multispectral Bands:** The satellite captures data across multiple spectral bands, including visible, near-infrared, and shortwave infrared. This multispectral capability enables the extraction of diverse information about the land surface, making it possible to discriminate between different land cover types based on their unique spectral signatures.
-
-- **Temporal Coverage:** Sentinel-2 has a revisit time of a few days, ensuring frequent acquisition of imagery for a given area. This temporal coverage is vital for monitoring changes over time, such as seasonal variations and dynamic coastal processes.
-
-- **Open Access Policy:** The Copernicus program adopts an open access policy, making Sentinel-2 data freely available to users worldwide. This accessibility promotes widespread use and facilitates research and monitoring activities globally.
-
-**Pre-processing**
-~~~~~~~~~~~~~~~~~~~
-
-In the initial steps of data acquisition, a critical phase of filtering and processing the acquired data was conducted. These steps, performed within the Google Earth Engine environment, were aimed at ensuring that the subsequent land cover classification would be conducted on high-quality, relevant information.
-
-The temporal and cloud cover constraints, once established, played a pivotal role in refining the dataset. By limiting the imagery to a specific time frame — from January 1, 2022, to December 30, 2022 — and setting a maximum cloud probability of 20%, the script ensured that the selected images were both temporally relevant and minimally affected by cloud cover.
-
-To enhance the accuracy of subsequent analyses, two essential masking functions were defined. The `maskClouds` function utilized cloud probability information to mask out cloudy pixels. This step was crucial in mitigating the impact of cloud interference on the quality of the land cover classification results. Simultaneously, the `maskEdges` function addressed potential artifacts at scene edges by applying masks derived from 20m and 60m bands, systematically excluding undesirable data from the analysis.
-
-With the filtered and masked data in hand, the script proceeded to the integration of cloud probability information into the Sentinel-2 surface reflectance collection. This integration, achieved through the joining of datasets and subsequent cloud masking, further refined the dataset, ensuring that only the highest-quality pixels were considered for subsequent analysis.
-
-The selection of specific spectral bands (Blue, Green, Red, and NIR) and the definition of visualization parameters were pivotal steps in preparing the imagery for visual inspection. By adding the resulting imagery to the map with a focus on these selected bands, the script facilitated a detailed and insightful visual assessment of the Sentinel-2 data, setting the stage for subsequent land cover classification and comprehensive coastal geomorphology monitoring.
-
-**Classification Process: A Detailed Overview**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The classification process is a critical component of coastal geomorphology monitoring, employing a machine learning approach to derive land cover maps from Sentinel-2 satellite imagery. The process is encapsulated by the general equation: data + Trained model = map. This equation represents the core workflow, where the spectral information of individual pixels from the Sentinel-2 imagery is evaluated and classified based on a model trained on labeled data.
-
-.. figure:: path/to/general_classification_equation.png
-   :width: 400px
-   :alt: General classification equation
-   :align: center
-
-**1. Data Collection:**
-   The term "data" in the equation refers to the collection of individual pixels from a multi-band Sentinel-2 image of unknown class. These pixels represent the raw information used as input for the classification model. Each pixel encapsulates spectral data from different bands, capturing the unique signature of the earth's surface under observation.
-
-**2. Trained Model Construction:**
-   The variable "Trained model" is the result of an intricate process involving labeled data and model architecture. The labeled data consists of a multiband image where the land use or land cover is known. This labeled dataset is crucial for training the classification model. The equation for this step is: labeled data + model architecture = trained model.
-
-.. figure:: path/to/model_development.png
-   :width: 400px
-   :alt: Model development
-   :align: center
-
-   **2.1 Labeled Data: A Ground Truth Reference**
-   The training data consists of labeled samples from various geographical locations across the study area. The labeled data is akin to the initial data, but with a crucial difference — each pixel's land cover class is known. This dataset serves as a ground truth reference during the training phase, allowing the model to learn the spectral patterns associated with different land cover types.
-
-.. figure:: path/to/point_training_sample.png
-   :width: 400px
-   :alt: Point training sample
-   :align: center
-
-   Adequate labeled data helps in mitigating bias in the model's predictions. Bias can arise when the training data is not representative of the true distribution of the target classes. A diverse set of labeled examples helps ensure that the model does not become skewed towards certain classes, providing a more unbiased and accurate representation of the landscape. In the context of machine learning, algorithms typically require numeric input. This necessitates converting categorical labels, such as land cover or land use names, into numeric values. This process is known as label encoding or one-hot encoding.
-
-.. figure:: path/to/need_for_adequate_training_samples.png
-   :width: 400px
-   :alt: Need for adequate training samples
-   :align: center
-
-**Model Architecture: Choosing the Best Fit**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The choice of model architecture significantly influences the performance of the classification model. In this study, the selection was made between two powerful algorithms: Random Forest and Support Vector Machines (SVM). The decision was based on their comparative performance during the training phase, with the goal of choosing the model that best captures the complex relationships within the data. The model that demonstrates superior performance during the evaluation phase is selected for land cover classification. This chosen model encapsulates the knowledge gained from the training data and is ready for application to the entire study area.
-
-**3. Classification: Applying the Trained Model to Generate Maps**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-With the trained model in place, the next step is applying it to the initial, unlabeled Sentinel-2 image. The equation initial data + trained model = map comes into play.
-
-.. figure:: path/to/model_deployment.png
-   :width: 400px
-   :alt: Model deployment
-   :align: center
-
-For each pixel in the Sentinel-2 imagery, the trained model evaluates the spectral information from the input bands and assigns a land cover class based on the learned patterns from the training data.
-
-**Land Cover Map: Deriving Insights from Spatial Patterns**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The output of the classification process is a high-resolution land cover map. This map provides spatial insights into the distribution of the following terrestrial classes:
-
-- **Barren:** Represents areas with minimal vegetation cover, aiding in the identification of desolate regions.
-- **Beach:** Indicates the sandy coastal regions, vital for understanding erosion and sedimentation patterns.
-- **Cropland:** Identifies cultivated areas along the coast, facilitating agricultural monitoring.
-- **Forest and Grassland:** Highlights vegetative cover, essential for biodiversity assessment and ecosystem health monitoring.
-- **Mangroves:** Crucial for coastal protection, the mapping of mangroves aids in conservation efforts.
-- **River-Creek:** Identifies watercourse patterns, contributing to hydrological studies.
-- **Road and Settlement:** Enables urbanization monitoring and infrastructure development assessment.
-- **Stony:** Recognizes areas with rocky or stony substrates along the coast.
-- **Water Wetland:** Indicates wetland areas, supporting biodiversity and water quality studies.
-
-.. figure:: path/to/islands_of_seychelles.png
-   :width: 400px
-   :alt: Islands of Seychelles
-
-.. figure:: path/to/seychelles_mahe_classification_map.png
-   :width: 400px
-   :alt: Seychelles Mahe classification map
-
-
+Intro2
 ======
 
 Coastal Zone
@@ -388,11 +267,7 @@ Capturing the individual feature spectrum is relatively more complex than the te
 References
 -------------
 
-1. Coastal zone. Available on: https://commons.wikimedia.org/wiki/File:Littoral_Zones.jpg 
-2. Coral polyp. Available on: https://commons.wikimedia.org/wiki/File:Coral_polyp_it.svg 
-3. Hedley, J.D., et al., Spectral unmixing of coral reef benthos under ideal conditions. Coral Reefs, 2004. 23(1): p. 60-7
-
-4. Noel Gorelick, Matt Hancher, Mike Dixon, Simon Ilyushchenko, David Thau, Rebecca Moore, "Google Earth Engine: Planetary-scale geospatial analysis for everyone," Remote Sensing of Environment, Volume 202, 2017, Pages 18-27, ISSN 0034-4257, [https://doi.org/10.1016/j.rse.2017.06.031](https://doi.org/10.1016/j.rse.2017.06.031). ([ScienceDirect](https://www.sciencedirect.com/science/article/pii/S0034425717302900))
-5. Szantoi, Z. and Strobl, P., Copernicus Sentinel-2 calibration and validation, EUROPEAN JOURNAL OF REMOTE SENSING, ISSN 2279-7254, 52 (1), 2019, p. 253-255, JRC115729.
-
+Coastal zone. Available on: https://commons.wikimedia.org/wiki/File:Littoral_Zones.jpg 
+Coral polyp. Available on: https://commons.wikimedia.org/wiki/File:Coral_polyp_it.svg 
+Hedley, J.D., et al., Spectral unmixing of coral reef benthos under ideal conditions. Coral Reefs, 2004. 23(1): p. 60-73
 
