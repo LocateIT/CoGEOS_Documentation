@@ -114,8 +114,8 @@ The model that demonstrates superior performance during the evaluation phase is 
 
 5. Classification: Applying the Trained Model to Generate Maps
 ^^^^^^^^^^^^^^
-
 With the trained model in place, the next step is applying it to the initial, unlabeled Sentinel-2 image. The equation initial data + trained model = map comes into play. 
+
 
 .. image:: images/geomorphology/Images/model_deployment.png
    :align: center
