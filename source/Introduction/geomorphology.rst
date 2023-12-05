@@ -43,7 +43,7 @@ The Copernicus program adopts an open access policy, making Sentinel-2 data free
 
 b.	Pre-processing:
 ----------------
-In the initial steps of data acquisition, critical phase preprocessing  the acquired data was conducted to enhance the image quality in order to achieve the desired results
+In the initial steps of data acquisition, critical phase of preprocessing  the acquired data was conducted to enhance the image quality in order to achieve the desired results in the processes that followed
 These steps, performed within the Google Earth Engine environment, were aimed at ensuring the subsequent land cover classification would be conducted on high-quality, relevant information.
 
 The temporal and cloud cover constraints, once established, played a pivotal role in refining the dataset. By limiting the imagery to a specific time frame — from January 1, 2022, to December 30, 2022 — and setting a maximum cloud probability of 20%, the script ensured that the selected images were both temporally relevant and minimally affected by cloud cover.
