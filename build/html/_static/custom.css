@@ -1,1 +1,5 @@
 /* This file intentionally left blank. */
+/* Change the color of level 1 headings to blue */
+h1 {
+    color: blue;
+}

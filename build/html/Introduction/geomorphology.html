@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>GEOMOPHOLOGY &#8212; CoGEOS  documentation</title>
+    <title>COASTAL GEOMORPHOLOGY &#8212; CoGEOS  documentation</title>
   
   
   
@@ -41,6 +41,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Introduction/geomorphology';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="PLUGIN" href="plugin.html" />
     <link rel="prev" title="SHORELINE" href="shoreline.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -141,7 +142,21 @@
 
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="#">
-                        GEOMOPHOLOGY
+                        COASTAL GEOMORPHOLOGY
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="plugin.html">
+                        PLUGIN
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="dashboard.html">
+                        GEOPORTAL
                       </a>
                     </li>
                 
@@ -235,7 +250,21 @@ document.write(`
 
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="#">
-                        GEOMOPHOLOGY
+                        COASTAL GEOMORPHOLOGY
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="plugin.html">
+                        PLUGIN
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="dashboard.html">
+                        GEOPORTAL
                       </a>
                     </li>
                 
@@ -295,7 +324,7 @@ document.write(`
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page">GEOMOPHOLOGY</li>
+    <li class="breadcrumb-item active" aria-current="page">COASTAL...</li>
   </ul>
 </nav>
 </div>
@@ -312,11 +341,269 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="geomophology">
-<h1>GEOMOPHOLOGY<a class="headerlink" href="#geomophology" title="Link to this heading">#</a></h1>
-<p>What is geomorphology?</p>
-<p>benthic
-terestial</p>
+  <section id="coastal-geomorphology">
+<h1>COASTAL GEOMORPHOLOGY<a class="headerlink" href="#coastal-geomorphology" title="Link to this heading">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>Coastal geomorphology monitoring is essential for understanding the dynamic changes in coastal landscapes. This documentation focuses on the classification of terrestrial classes in the Indian Ocean Island countries, namely Madagascar, Comoros, Seychelles, and Mauritius. The identified classes for both terrestrial and benthic cover contributes to comprehensive coastal monitoring efforts.</p>
+</section>
+<section id="study-area-and-importance">
+<h2>Study Area and Importance<a class="headerlink" href="#study-area-and-importance" title="Link to this heading">#</a></h2>
+<p>The Indian Ocean islands exhibit diverse coastal features, making them vulnerable to natural and anthropogenic influences. Monitoring these areas is crucial for sustainable development, environmental conservation, and disaster risk reduction.</p>
+<p>The study focuses on the coastal regions of Madagascar, Comoros, Seychelles, and Mauritius. These islands exhibit diverse coastal landscapes, including beaches, mangroves, and wetlands, making them ideal for comprehensive geomorphological analysis.</p>
+<a class="reference internal image-reference" href="../_images/Study_Area.png"><img alt="Indian Ocean Island countries" class="align-center" src="../_images/Study_Area.png" style="width: 70%;" /></a>
+</section>
+<section id="data-source-and-methodology">
+<h2>Data Source and Methodology<a class="headerlink" href="#data-source-and-methodology" title="Link to this heading">#</a></h2>
+<p>The study on land cover relies on Sentinel-2 satellite data, known for its high-resolution and multispectral capabilities</p>
+</section>
+<section id="data-acquisition">
+<h2>Data Acquisition<a class="headerlink" href="#data-acquisition" title="Link to this heading">#</a></h2>
+<p>Sentinel-2 is a series of Earth observation satellites developed by the European Space Agency (ESA) as part of the Copernicus program. These satellites are equipped with a high-resolution multispectral imaging system, capturing data in various spectral bands. The key aspects that make Sentinel-2 imagery invaluable for land cover classification include:</p>
+<section id="spatial-resolution">
+<h3>Spatial Resolution:<a class="headerlink" href="#spatial-resolution" title="Link to this heading">#</a></h3>
+<p>Sentinel-2 provides high spatial resolution, allowing for detailed and precise observations of the Earth’s surface. This is crucial for distinguishing fine-scale features in coastal areas, such as beaches, mangroves, and wetlands.</p>
+</section>
+<section id="multispectral-bands">
+<h3>Multispectral Bands:<a class="headerlink" href="#multispectral-bands" title="Link to this heading">#</a></h3>
+<p>The satellite captures data across multiple spectral bands, including visible, near-infrared, and shortwave infrared. This multispectral capability enables the extraction of diverse information about the land surface, making it possible to discriminate between different land cover types based on their unique spectral signatures.</p>
+</section>
+<section id="temporal-coverage">
+<h3>Temporal Coverage:<a class="headerlink" href="#temporal-coverage" title="Link to this heading">#</a></h3>
+<p>Sentinel-2 has a revisit time of a few days, ensuring frequent acquisition of imagery for a given area. This temporal coverage is vital for monitoring changes over time, such as seasonal variations and dynamic coastal processes.</p>
+</section>
+<section id="open-access-policy">
+<h3>Open Access Policy:<a class="headerlink" href="#open-access-policy" title="Link to this heading">#</a></h3>
+<p>The Copernicus program adopts an open access policy, making Sentinel-2 data freely available to users worldwide. This accessibility promotes widespread use and facilitates research and monitoring activities globally.</p>
+</section>
+</section>
+<section id="pre-processing">
+<h2>Pre-processing:<a class="headerlink" href="#pre-processing" title="Link to this heading">#</a></h2>
+<p>In the initial steps of data acquisition, critical phase of preprocessing  the acquired data was conducted to enhance the image quality in order to achieve the desired results in the processes that followed
+These steps, performed within the Google Earth Engine environment, were aimed at ensuring the subsequent land cover classification would be conducted on high-quality, relevant information.</p>
+<p>The temporal and cloud cover constraints, once established, played a pivotal role in refining the dataset. By limiting the imagery to a specific time frame — from January 1, 2022, to December 30, 2022 — and setting a maximum cloud probability of 20%, the script ensured that the selected images were both temporally relevant and minimally affected by cloud cover.</p>
+<p>To enhance the accuracy of subsequent analyses, two essential masking functions were defined. The maskClouds function utilized cloud probability information to mask out cloudy pixels. This step was crucial in mitigating the impact of cloud interference on the quality of the land cover classification results. Simultaneously, the maskEdges function addressed potential artifacts at scene edges by applying masks derived from 20m and 60m bands, systematically excluding undesirable data from the analysis.</p>
+<p>With the filtered and masked data in hand, the script proceeded to the integration of cloud probability information into the Sentinel-2 surface reflectance collection. This integration, achieved through the joining of datasets and subsequent cloud masking, further refined the dataset, ensuring that only the highest-quality pixels were considered for subsequent analysis.</p>
+<p>The selection of specific spectral bands (Blue, Green, Red, and NIR) and the definition of visualization parameters were pivotal steps in preparing the imagery for visual inspection. By adding the resulting imagery to the map with a focus on these selected bands, the script facilitated a detailed and insightful visual assessment of the Sentinel-2 data, setting the stage for subsequent land cover classification and comprehensive coastal geomorphology monitoring.</p>
+</section>
+<section id="classification-process-a-detailed-overview">
+<h2>Classification Process: A Detailed Overview<a class="headerlink" href="#classification-process-a-detailed-overview" title="Link to this heading">#</a></h2>
+<p>The classification process is a critical component of coastal geomorphology monitoring, employing a machine learning approach to derive land cover maps from Sentinel-2 satellite imagery. The process is encapsulated by the general equation: data + Trained model = map. This equation represents the core workflow, where the spectral information of individual pixels from the Sentinel-2 imagery is evaluated and classified based on a model trained on labeled data.</p>
+<a class="reference internal image-reference" href="../_images/General_Classification_Equation.png"><img alt="General classification equation" class="align-center" src="../_images/General_Classification_Equation.png" style="width: 70%;" /></a>
+<section id="data-collection">
+<h3>Data Collection:<a class="headerlink" href="#data-collection" title="Link to this heading">#</a></h3>
+<p>The term “data” in the equation refers to the collection of individual pixels from a multi-band Sentinel-2 image of unknown class. These pixels represent the raw information used as input for the classification model. Each pixel encapsulates spectral data from different bands, capturing the unique signature of the earth surface under observation.</p>
+</section>
+<section id="trained-model-construction">
+<h3>Trained Model Construction:<a class="headerlink" href="#trained-model-construction" title="Link to this heading">#</a></h3>
+<p>The variable “Trained model” is the result of an intricate process involving labeled data and model architecture. The labeled data consists of a multiband image where the land use or land cover is known. This labeled dataset is crucial for training the classification model. The equation for this step is: labeled data + model architecture = trained model.</p>
+<a class="reference internal image-reference" href="../_images/model_Development.png"><img alt="MOdel Development" class="align-center" src="../_images/model_Development.png" style="width: 70%;" /></a>
+</section>
+<section id="labeled-data-a-ground-truth-reference">
+<h3>Labeled Data: A Ground Truth Reference<a class="headerlink" href="#labeled-data-a-ground-truth-reference" title="Link to this heading">#</a></h3>
+<p>The training data consists of labeled samples from various geographical locations across the study area. The labeled data is akin to the initial data, but with a crucial difference — each pixel’s land cover class is known.</p>
+<a class="reference internal image-reference" href="../_images/Manual_Training_Sites.png"><img alt="Distribution of Manually collected training sites" class="align-center" src="../_images/Manual_Training_Sites.png" style="width: 70%;" /></a>
+<p>This dataset serves as a ground truth reference during the training phase, allowing the model to learn the spectral patterns associated with different land cover types. For each training point, spectral signatures are extracted at that point, which build a training sample for the next step in machine learning algorithm.</p>
+<a class="reference internal image-reference" href="../_images/Point_Training_Sample.png"><img alt="Point Training Sample" class="align-center" src="../_images/Point_Training_Sample.png" style="width: 70%;" /></a>
+<p>Adequate labeled data helps in mitigating bias in the model’s predictions. Bias can arise when the training data is not representative of the true distribution of the target classes. A diverse set of labeled examples helps ensure that the model does not become skewed towards certain classes, providing a more unbiased and accurate representation of the landscape. In the context of machine learning, algorithms typically require numeric input. This necessitates converting categorical labels, such as land cover or land use names, into numeric values. This process is known as label encoding or one-hot encoding</p>
+<a class="reference internal image-reference" href="../_images/training_samples.png"><img alt="training data with spectral values" class="align-center" src="../_images/training_samples.png" style="width: 70%;" /></a>
+</section>
+<section id="model-architecture-choosing-the-best-fit">
+<h3>1. Model Architecture: Choosing the Best Fit<a class="headerlink" href="#model-architecture-choosing-the-best-fit" title="Link to this heading">#</a></h3>
+<p>The choice of model architecture significantly influences the performance of the classification model. In this study, the selection was made between two powerful algorithms: Random Forest and Support Vector Machines (SVM). The decision was based on their comparative performance during the training phase, with the goal of choosing the model that best captures the complex relationships within the data.</p>
+<p>The model that demonstrates superior performance during the evaluation phase is selected for land cover classification. This chosen model encapsulates the knowledge gained from the training data and is ready for application to the entire study area.</p>
+</section>
+<section id="classification-applying-the-trained-model-to-generate-maps">
+<h3>5. Classification: Applying the Trained Model to Generate Maps<a class="headerlink" href="#classification-applying-the-trained-model-to-generate-maps" title="Link to this heading">#</a></h3>
+<p>With the trained model in place, the next step is applying it to the initial, unlabeled Sentinel-2 image. The equation initial data + trained model = map comes into play.</p>
+<a class="reference internal image-reference" href="../_images/model_deployment.png"><img alt="Model Deployment" class="align-center" src="../_images/model_deployment.png" style="width: 70%;" /></a>
+<p>For each pixel in the Sentinel-2 imagery, the trained model evaluates the spectral information from the input bands and assigns a land cover class based on the learned patterns from the training data</p>
+</section>
+</section>
+<section id="land-cover-map-deriving-insights-from-spatial-paterns">
+<h2>Land Cover Map: Deriving INsights from Spatial Paterns<a class="headerlink" href="#land-cover-map-deriving-insights-from-spatial-paterns" title="Link to this heading">#</a></h2>
+<p>The output of the classification process is a high-resolution land cover map. This map provides spatial insights into the distribution of the following terrestrial classes:</p>
+<ul class="simple">
+<li><p>Barren: Represents areas with minimal vegetation cover, aiding in the identification of desolate regions.</p></li>
+<li><p>Beach: Indicates the sandy coastal regions, vital for understanding erosion and sedimentation patterns.</p></li>
+<li><p>Cropland: Identifies cultivated areas along the coast, facilitating agricultural monitoring.</p></li>
+<li><p>Forest and Grassland: Highlights vegetative cover, essential for biodiversity assessment and ecosystem health monitoring.</p></li>
+<li><p>Mangroves: Crucial for coastal protection, the mapping of mangroves aids in conservation efforts.</p></li>
+<li><p>River-Creek: Identifies watercourse patterns, contributing to hydrological studies.</p></li>
+<li><p>Road and Settlement: Enables urbanization monitoring and infrastructure development assessment.</p></li>
+<li><p>Stony: Recognizes areas with rocky or stony substrates along the coast.</p></li>
+<li><p>Water and Wetland: Indicates wetland areas, supporting biodiversity and water quality studies.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/Mahe_classification_map.png"><img alt="Seychelles Mahe classification map" class="align-center" src="../_images/Mahe_classification_map.png" style="width: 70%;" /></a>
+</section>
+<section id="coastal-zone">
+<h2>Coastal Zone<a class="headerlink" href="#coastal-zone" title="Link to this heading">#</a></h2>
+<p>According to the ICZM Protocol, the coastal zone is defined as ‘a geomorphologic area either side of the seashore in which the interaction between the marine and land parts occurs in the form of complex ecological and resource systems made up of biotic and abiotic components co-existing and interacting with human communities and relevant socio-economic activities.’ The shore is comprised of the backshore and foreshore. The backshore, itself, is essentially comprised of a berm, which is a gently sloping dry portion of the beach.</p>
+<p>Tidal fluctuation causes the shoreline to migrate back and forth within the shore range, forming longshore bars near the low tide breaker line. The longshore bar demarcates the region between the nearshore zone and offshore region.</p>
+<a class="reference internal image-reference" href="../_images/fig1.png"><img alt="Classification of the coastal region" class="align-center" src="../_images/fig1.png" style="width: 70%;" /></a>
+</section>
+<section id="types-of-reefs">
+<h2>Types of Reefs<a class="headerlink" href="#types-of-reefs" title="Link to this heading">#</a></h2>
+<p>The Indian Ocean Islands investigated are protected by coral reef systems. These are mainly grouped into 3 main types:</p>
+<section id="fringing-reef">
+<h3>Fringing Reef<a class="headerlink" href="#fringing-reef" title="Link to this heading">#</a></h3>
+<p>Typically occur adjacent to land, with little or no separation from the shore and forms a shallow lagoon.</p>
+</section>
+<section id="barrier-reef">
+<h3>Barrier Reef<a class="headerlink" href="#barrier-reef" title="Link to this heading">#</a></h3>
+<p>Broader and separated from land by a lagoon extending some kilometers wide. These extend as a broken, irregular ring around the coast or an island, running almost parallel to it.</p>
+</section>
+<section id="atoll-reef">
+<h3>Atoll Reef<a class="headerlink" href="#atoll-reef" title="Link to this heading">#</a></h3>
+<p>An atoll is a roughly circular (annular) oceanic reef system surrounding a large (and often deep) central lagoon.</p>
+<a class="reference internal image-reference" href="../_images/fig2.png"><img alt="Structure of a fringing reef system" class="align-center" src="../_images/fig2.png" style="width: 70%;" /></a>
+</section>
+</section>
+<section id="reef-zonation-and-geomorphic-classes">
+<h2>Reef Zonation and Geomorphic Classes<a class="headerlink" href="#reef-zonation-and-geomorphic-classes" title="Link to this heading">#</a></h2>
+<p>The reef area is comprised of:</p>
+<section id="terrestrial-reef-flat">
+<h3>Terrestrial Reef Flat<a class="headerlink" href="#terrestrial-reef-flat" title="Link to this heading">#</a></h3>
+<p>Broad, flat, shallow to semi-exposed area attached to land at one side, and subject to freshwater run-off, nutrients, and sediment.</p>
+</section>
+<section id="lagoon">
+<h3>Lagoon<a class="headerlink" href="#lagoon" title="Link to this heading">#</a></h3>
+<p>Sheltered, flat-bottomed sediment-dominated area (shallow &lt; 5m; Deep &gt;5m).</p>
+</section>
+<section id="inner-reef-flat">
+<h3>Inner Reef Flat<a class="headerlink" href="#inner-reef-flat" title="Link to this heading">#</a></h3>
+<p>Low energy, sediment-dominated, horizontal to gently sloping platform.</p>
+</section>
+<section id="outer-reef-flat">
+<h3>Outer Reef Flat<a class="headerlink" href="#outer-reef-flat" title="Link to this heading">#</a></h3>
+<p>A near horizontal, broad, and shallow platform which dissipates a significant portion of the remaining wave energy.</p>
+</section>
+<section id="reef-crest">
+<h3>Reef Crest<a class="headerlink" href="#reef-crest" title="Link to this heading">#</a></h3>
+<p>It is the highest point of the reef, generally shallow and characterized by the highest wave energy absorbance.</p>
+</section>
+<section id="reef-slope">
+<h3>Reef Slope<a class="headerlink" href="#reef-slope" title="Link to this heading">#</a></h3>
+<p>Reef slope is a submerged, sloping area extending seaward from the reef crest.</p>
+</section>
+<section id="plateau">
+<h3>Plateau<a class="headerlink" href="#plateau" title="Link to this heading">#</a></h3>
+<p>Deeper submerged (&gt; 5 m), hard-bottomed, horizontal to gently sloping (&lt;10°), seaward facing reef platform.</p>
+<p>In contrast to the fringing reef in figure 2 above, the barrier reef has a deeper lagoon section and an extended reef structure. This is depicted in figure 3 below.</p>
+<a class="reference internal image-reference" href="../_images/fig3.png"><img alt="Structure of a barrier reef system" class="align-center" src="../_images/fig3.png" style="width: 70%;" /></a>
+</section>
+</section>
+<section id="coastal-landform">
+<h2>Coastal Landform<a class="headerlink" href="#coastal-landform" title="Link to this heading">#</a></h2>
+<p>The coastal landform comprises a diverse range of ecosystems and morphologies. These include:</p>
+<section id="beach-and-dune-system">
+<h3>Beach and Dune System<a class="headerlink" href="#beach-and-dune-system" title="Link to this heading">#</a></h3>
+<p>The beach comprises the foreshore and backshore, while the dune comprises the fixed, the shifting, and the embryonic dunes.</p>
+</section>
+<section id="muddy-shoreline">
+<h3>Muddy Shoreline<a class="headerlink" href="#muddy-shoreline" title="Link to this heading">#</a></h3>
+<p>Present as tidal mud flats, they are composed of silt, clay, or fine sand. These generally form where tidal current velocities are too weak to resuspend completely the mud.</p>
+</section>
+<section id="rocky-shoreline">
+<h3>Rocky Shoreline<a class="headerlink" href="#rocky-shoreline" title="Link to this heading">#</a></h3>
+<p>These originate from the rapid cooling and hardening of volcanic lava outflows into the sea. A rocky shore is an intertidal area of seacoasts where solid rock predominates. They are mostly basaltic in nature.</p>
+</section>
+<section id="cliffs">
+<h3>Cliffs<a class="headerlink" href="#cliffs" title="Link to this heading">#</a></h3>
+<p>It is a high area of rock with a very steep side, at the edge of the sea. Cliffs are formed as erosion landforms due to the processes of erosion and weathering.</p>
+</section>
+<section id="saltmarshes-coastal-wetland">
+<h3>Saltmarshes (Coastal Wetland)<a class="headerlink" href="#saltmarshes-coastal-wetland" title="Link to this heading">#</a></h3>
+<p>Saltmarshes are coastal wetlands dominated by high vegetation that are periodically inundated by saltwater. They are marshy because the soil may be composed of deep mud and peat (plant matter in decomposition).</p>
+</section>
+<section id="cobble-shingle-beach">
+<h3>Cobble/Shingle Beach<a class="headerlink" href="#cobble-shingle-beach" title="Link to this heading">#</a></h3>
+<p>These occur principally on high wave energy shores and originate from cliff erosion of moderate to strong bedrock. Generally, cobble beaches are much steeper than sandy beaches and provide natural defense to shore.</p>
+</section>
+<section id="calcareous-limestone-shore">
+<h3>Calcareous Limestone Shore<a class="headerlink" href="#calcareous-limestone-shore" title="Link to this heading">#</a></h3>
+<p>It is a carbonate sedimentary rock essentially composed of minerals calcite and aragonite (formed by the fragmentation of shell, coral, algal, and other organic debris).</p>
+</section>
+<section id="estuary">
+<h3>Estuary<a class="headerlink" href="#estuary" title="Link to this heading">#</a></h3>
+<p>An estuary is a partially enclosed area of water on the coast where saltwater from the sea mixes with fresh water from rivers and streams.</p>
+</section>
+</section>
+<section id="benthic-habitat">
+<h2>Benthic Habitat<a class="headerlink" href="#benthic-habitat" title="Link to this heading">#</a></h2>
+<p>The benthic ecosystems comprise essentially of:</p>
+<section id="corals">
+<h3>Corals<a class="headerlink" href="#corals" title="Link to this heading">#</a></h3>
+<p>Having survived several mass extinctions, corals are animals (marine invertebrates) despite having a plant-appearance. The coral animals are referred to as polyps and are colonial in nature, being hosted on calcium carbonate skeletons. All polyps exist in harmony on the same calcium carbonate skeleton. Coral polyps have tentacles with nematocyst – stinging cells to catch preys, even small fish (~10% of food source). Symbiotic algae living inside the coral polyp tissue (zooxanthellae) provide ~90% of food source through photosynthesis. The zooxanthellae is also responsible for giving the corals their pigmentation.</p>
+<a class="reference internal image-reference" href="../_images/fig4.png"><img alt="The coral polyp" class="align-center" src="../_images/fig4.png" style="width: 70%;" /></a>
+</section>
+<section id="algae-seaweed">
+<h3>Algae/Seaweed<a class="headerlink" href="#algae-seaweed" title="Link to this heading">#</a></h3>
+<p>Algae are photosynthetic organisms that contain chlorophyll pigments. They lack the typical roots, stems, and leaves of vascular plants. They are not classified as plants. Instead, they fall into the group of protists and can be unicellular (Phytoplankton) or multicellular (macroalga seaweed). The most common types of algae include: (1) Brown algae/kelp (Shallow-Intermediate seawater); (2) Green algae (mostly in freshwater); Red algae (Deep seawater).</p>
+<a class="reference internal image-reference" href="../_images/fig5.png"><img alt="The algal specie" class="align-center" src="../_images/fig5.png" style="width: 70%;" /></a>
+</section>
+<section id="seagrass">
+<h3>Seagrass<a class="headerlink" href="#seagrass" title="Link to this heading">#</a></h3>
+<p>Seagrass are flowering plants that are found in shallow coastal seawater and can develop into dense meadows. They play a vital role in stabilizing the coastline and minimizing sediment movement that may lead to erosion areas. They have important carbon sequestration properties – 4000 m² sequesters 550 kg equivalent carbon annually (Equivalent to a car traveling twice the distance from Madagascar, Comoros, Seychelles, and Mauritius).</p>
+<a class="reference internal image-reference" href="../_images/fig6.png"><img alt="The seagrass specie" class="align-center" src="../_images/fig6.png" style="width: 70%;" /></a>
+</section>
+</section>
+<section id="geomorphological-classification-scales">
+<h2>Geomorphological Classification Scales<a class="headerlink" href="#geomorphological-classification-scales" title="Link to this heading">#</a></h2>
+<p>Based on the review of existing coastal features in the Indian Ocean Island Countries, the following Classification Scales are employed for terrestrial and benthic features of the coast.</p>
+<a class="reference internal image-reference" href="../_images/fig7.png"><img alt="The coastal feature classes" class="align-center" src="../_images/fig7.png" style="width: 70%;" /></a>
+</section>
+<section id="methodology">
+<h2>Methodology<a class="headerlink" href="#methodology" title="Link to this heading">#</a></h2>
+<p>The framework for the classification of coastal features is presented in Fig. 8. Sentinel 2 data is sourced and employed in the creation of a land and an ocean mask (about 5km from the shoreline). Terrestrial features are thereafter classified using a supervised classification technique (Maximum Likelihood or Support Vector Machine). Signature files are created using a sample set of control points for each feature. The result of the supervised classification is then validated against surveyed and literature sources. A manual correction is then undertaken to refine the classification of the classified features.</p>
+<p>Benthic features are classified from the extracted Sentinel 2 image using the ocean mask. A depth invariant index algorithm is applied to correct for the water column and enhance the accuracy of classification. A supervised classification technique is employed to delineate known features, including seagrass, underwater sediments, amongst others. An unsupervised k-means classification is used to detect unidentified classes. Validation and manual correction follow to ensure the correctness of the benthic classifications.</p>
+<a class="reference internal image-reference" href="../_images/fig8.png"><img alt="Methodological framework for geomorphological feature identification" class="align-center" src="../_images/fig8.png" style="width: 70%;" /></a>
+</section>
+<section id="supervised-classification">
+<h2>Supervised Classification<a class="headerlink" href="#supervised-classification" title="Link to this heading">#</a></h2>
+<p>Satellite sensors use the unique reflectance properties of distinct terrestrial features that permit delineation and characterization of their extents. Sentinel 2 high-resolution, multi-spectral images are used and consist of 13 spectral bands that range from the visible range to the shortwave infrared (SWIR). Supervised Classification: This process necessitates the user to manually interpret an image through grouping of grid cells that share common spectral reflectance. The classification procedures are summarized essentially in 3 main stages:</p>
+<ol class="arabic simple">
+<li><p>Using visual interpretation, the spectral signature for a geomorphological class is defined → Training set for a class</p></li>
+<li><p>A classification algorithm is thereafter utilized and employs the training class to identify grid cells belonging to that spectral class</p></li>
+<li><p>The range of numerical spectral signature values (R,G,B,NIR,…) belonging to distinct feature classes are used to categorize and group cells sharing common spectral properties</p></li>
+</ol>
+<a class="reference internal image-reference" href="../_images/fig9.png"><img alt="Sentinel 2 high-resolution, multi-spectral images" class="align-center" src="../_images/fig9.png" style="width: 70%;" /></a>
+</section>
+<section id="classification-algorithms">
+<h2>Classification Algorithms<a class="headerlink" href="#classification-algorithms" title="Link to this heading">#</a></h2>
+<section id="maximum-likelihood-classification-mlc">
+<h3>Maximum Likelihood Classification (MLC)<a class="headerlink" href="#maximum-likelihood-classification-mlc" title="Link to this heading">#</a></h3>
+<p>The algorithm assumes that the distribution for respective feature classes in each band follows a normal curve and determines the probability that a random pixel belongs to a certain class.</p>
+<a class="reference internal image-reference" href="../_images/fig10.png"><img alt="Illustration of the underlying principle of MLC" class="align-center" src="../_images/fig10.png" style="width: 70%;" /></a>
+</section>
+<section id="support-vector-machine-svm">
+<h3>Support Vector Machine (SVM)<a class="headerlink" href="#support-vector-machine-svm" title="Link to this heading">#</a></h3>
+<p>SVM performs the classification by drawing a hyperplane. The hyperplane is drawn in such a way as to maximize the distance to points in either class (referred to as the margin).</p>
+<a class="reference internal image-reference" href="../_images/fig11.png"><img alt="Illustration of the underlying principle of SVM" class="align-center" src="../_images/fig11.png" style="width: 70%;" /></a>
+</section>
+<section id="random-forest">
+<h3>Random Forest<a class="headerlink" href="#random-forest" title="Link to this heading">#</a></h3>
+<p>This algorithm works by building multiple decision trees and then merging them together to get more stable and accurate predictions. A training dataset is used and labelled into a decision tree, with an underlying set of rules that will aid in the classification process.</p>
+</section>
+</section>
+<section id="unsupervised-classification">
+<h2>Unsupervised Classification<a class="headerlink" href="#unsupervised-classification" title="Link to this heading">#</a></h2>
+<p>In unsupervised classification, no training dataset is required. Instead, the user specifies the number of classes and an algorithm automatically groups the classes that share similar statistical behavior. The most used clustering technique is the k-means method.</p>
+</section>
+<section id="reflectance-and-spectral-signature">
+<h2>Reflectance and Spectral Signature<a class="headerlink" href="#reflectance-and-spectral-signature" title="Link to this heading">#</a></h2>
+<p>The spectral information of features is used to distinguish between them. Energy from the sun is absorbed and reflected by features on earth, which are thereafter detected and measured. Each feature reflects energy to different extents owing to their chemical and structural compositions (Spectral Reflectance). These are interpreted and used to classify coastal terrestrial features.</p>
+<a class="reference internal image-reference" href="../_images/fig12.png"><img alt="Reflectance spectra of terrestrial features" class="align-center" src="../_images/fig12.png" style="width: 70%;" /></a>
+<p>Capturing the individual feature spectrum is relatively more complex than the terrestrial components. The outgoing radiation from the shallow water has the contribution of both the water column and bottom substrate. Water column correction is therefore applied in case the shallow lagoon section is murky. A Depth Invariant Index algorithm is employed in that regard. The distinction in spectral reflectance of different features helps identify benthic components.</p>
+<a class="reference internal image-reference" href="../_images/fig13.png"><img alt="Reflectance spectra of benthic features" class="align-center" src="../_images/fig13.png" style="width: 70%;" /></a>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<p>Coastal zone. Available on: <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Littoral_Zones.jpg">https://commons.wikimedia.org/wiki/File:Littoral_Zones.jpg</a></p>
+<p>Coral polyp. Available on: <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Coral_polyp_it.svg">https://commons.wikimedia.org/wiki/File:Coral_polyp_it.svg</a></p>
+<p>Hedley, J.D., et al., Spectral unmixing of coral reef benthos under ideal conditions. Coral Reefs, 2004. 23(1): p. 60-73 Noel Gorelick, Matt Hancher, Mike Dixon, Simon Ilyushchenko, David Thau, Rebecca Moore, Google Earth Engine: Planetary-scale geospatial analysis for everyone, Remote Sensing of Environment, Volume 202,2017, Pages 18-27ISSN 0034-4257,https://doi.org/10.1016/j.rse.2017.06.031.(<a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0034425717302900">https://www.sciencedirect.com/science/article/pii/S0034425717302900</a>)</p>
+<p>Szantoi, Z. and Strobl, P., Copernicus Sentinel-2 calibration and validation, EUROPEAN JOURNAL OF REMOTE SENSING, ISSN 2279-7254, 52 (1), 2019, p. 253-255, JRC115729.</p>
+</section>
 </section>
 
 
@@ -338,6 +625,15 @@ terestial</p>
         <p class="prev-next-title">SHORELINE</p>
       </div>
     </a>
+    <a class="right-next"
+       href="plugin.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">PLUGIN</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -346,6 +642,81 @@ terestial</p>
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#study-area-and-importance">Study Area and Importance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-source-and-methodology">Data Source and Methodology</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-acquisition">Data Acquisition</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-resolution">Spatial Resolution:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multispectral-bands">Multispectral Bands:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#temporal-coverage">Temporal Coverage:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-access-policy">Open Access Policy:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-processing">Pre-processing:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classification-process-a-detailed-overview">Classification Process: A Detailed Overview</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-collection">Data Collection:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trained-model-construction">Trained Model Construction:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#labeled-data-a-ground-truth-reference">Labeled Data: A Ground Truth Reference</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-architecture-choosing-the-best-fit">1. Model Architecture: Choosing the Best Fit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classification-applying-the-trained-model-to-generate-maps">5. Classification: Applying the Trained Model to Generate Maps</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#land-cover-map-deriving-insights-from-spatial-paterns">Land Cover Map: Deriving INsights from Spatial Paterns</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coastal-zone">Coastal Zone</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-reefs">Types of Reefs</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fringing-reef">Fringing Reef</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#barrier-reef">Barrier Reef</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#atoll-reef">Atoll Reef</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reef-zonation-and-geomorphic-classes">Reef Zonation and Geomorphic Classes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#terrestrial-reef-flat">Terrestrial Reef Flat</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lagoon">Lagoon</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inner-reef-flat">Inner Reef Flat</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#outer-reef-flat">Outer Reef Flat</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reef-crest">Reef Crest</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reef-slope">Reef Slope</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plateau">Plateau</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coastal-landform">Coastal Landform</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#beach-and-dune-system">Beach and Dune System</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#muddy-shoreline">Muddy Shoreline</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocky-shoreline">Rocky Shoreline</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cliffs">Cliffs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#saltmarshes-coastal-wetland">Saltmarshes (Coastal Wetland)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cobble-shingle-beach">Cobble/Shingle Beach</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calcareous-limestone-shore">Calcareous Limestone Shore</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estuary">Estuary</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#benthic-habitat">Benthic Habitat</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#corals">Corals</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algae-seaweed">Algae/Seaweed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#seagrass">Seagrass</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geomorphological-classification-scales">Geomorphological Classification Scales</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methodology">Methodology</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#supervised-classification">Supervised Classification</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classification-algorithms">Classification Algorithms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maximum-likelihood-classification-mlc">Maximum Likelihood Classification (MLC)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#support-vector-machine-svm">Support Vector Machine (SVM)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#random-forest">Random Forest</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unsupervised-classification">Unsupervised Classification</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reflectance-and-spectral-signature">Reflectance and Spectral Signature</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+  </nav></div>
 
   <div class="sidebar-secondary-item">
   <div class="tocsection sourcelink">
